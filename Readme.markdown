@@ -1,5 +1,5 @@
-ItemLogger plugin v1.01
-by Pandemoneus
+ItemLogger plugin v1.01<br>
+by Pandemoneus<br>
 https://github.com/Pandemoneus
 
 How to install:
@@ -14,12 +14,12 @@ How to uninstall:
 
 Permission nodes:
 -----------------
-itemlogger.help //makes help command available
-itemlogger.log.clearlogs //makes clearlogs command available
+itemlogger.help //makes help command available<br>
+itemlogger.log.clearlogs //makes clearlogs command available<br>
 itemlogger.log.deletelog //makes deletelog command available
 
 Commands:
 -----------------
-itemlogger (alias: il) - shows the help
-itemlogger clearlogs (alias: il cl) - deletes all logs
+itemlogger (alias: il) - shows the help<br>
+itemlogger clearlogs (alias: il cl) - deletes all logs<br>
 itemlogger deletelog [player] (alias: il dl [player]) - deletes the log of the [player]
