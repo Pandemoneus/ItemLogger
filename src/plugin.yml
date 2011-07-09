@@ -1,0 +1,14 @@
+name: ItemLogger
+main: com.pandemoneus.itemLogger.ItemLogger
+version: 1.01
+author: 'Pandemoneus'
+
+commands:
+    itemlogger:
+        description: ItemLogger
+        usage: |
+               /<command>
+    il:
+        description: ItemLogger
+        usage: |
+               /<command>
