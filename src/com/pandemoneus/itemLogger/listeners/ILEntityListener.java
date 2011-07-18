@@ -1,7 +1,9 @@
 package com.pandemoneus.itemLogger.listeners;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
@@ -27,18 +29,27 @@ public final class ILEntityListener extends EntityListener {
 	 */
 	public void onEntityDeath(EntityDeathEvent event) {
 		if (event.getEntity() instanceof Player) {
+			Player player = (Player) event.getEntity();
 			// dummy cause
 			DamageCause lastDamageCause = EntityDamageEvent.DamageCause.CUSTOM;
 
-			if (event.getEntity().getLastDamageCause() != null) {
-				lastDamageCause = event.getEntity().getLastDamageCause()
+			if (player.getLastDamageCause() != null) {
+				lastDamageCause = player.getLastDamageCause()
 						.getCause();
+			}
+			
+			List<Entity> nearbyEntities = player.getNearbyEntities(10.0, 10.0, 10.0);
+			ArrayList<Player> nearbyPlayers = new ArrayList<Player>();
+			
+			for (Entity e : nearbyEntities) {
+				if (e instanceof Player) {
+					nearbyPlayers.add((Player) e);
+				}
 			}
 
 			List<ItemStack> list = event.getDrops();
 
-			ILUtil.writeToFile((Player) event.getEntity(), lastDamageCause,
-					ILUtil.formatItemStackList(list));
+			ILUtil.writeToFile(player, lastDamageCause, nearbyPlayers, ILUtil.formatItemStackList(list));
 		}
 	}
 }

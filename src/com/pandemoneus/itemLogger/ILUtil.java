@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -119,9 +120,8 @@ public final class ILUtil {
 	 * @param s
 	 *            the string array to write
 	 */
-	public static void writeToFile(Player player, DamageCause lastDamageCause,
-			String[] s) {
-		if (player == null || s == null || lastDamageCause == null) {
+	public static void writeToFile(Player player, DamageCause lastDamageCause, ArrayList<Player> nearbyPlayers, String[] s) {
+		if (player == null || s == null || lastDamageCause == null || nearbyPlayers == null) {
 			return;
 		}
 
@@ -153,6 +153,15 @@ public final class ILUtil {
 			out.println(dateRep);
 			out.println("Died because of: "
 					+ formatDamageCause(lastDamageCause));
+			out.print("Nearby players:");
+			if (nearbyPlayers.isEmpty()) {
+				out.print(" --None--");
+			} else {
+				for (Player p : nearbyPlayers) {
+					out.print(" " + p.getName());
+				}
+			}
+			out.println();
 			out.println("----------------------");
 
 			for (String str : s) {

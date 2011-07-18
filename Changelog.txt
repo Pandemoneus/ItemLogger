@@ -1,0 +1,11 @@
+Version 1.02
+- Added nearby (cuboid with radius 10) players to log
+
+Version 1.01
+- Added Permissions support
+- Added command aliases
+- Increased maintainability
+
+
+Version 1.00
+- Initial release
