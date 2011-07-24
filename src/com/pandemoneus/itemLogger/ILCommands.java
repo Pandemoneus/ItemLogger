@@ -1,4 +1,4 @@
-package com.pandemoneus.itemLogger.commands;
+package com.pandemoneus.itemLogger;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,9 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.nijiko.permissions.PermissionHandler;
-import com.pandemoneus.itemLogger.ILUtil;
-import com.pandemoneus.itemLogger.ItemLogger;
-import com.pandemoneus.itemLogger.logger.Log;
 
 /**
  * Command class. Available commands are:

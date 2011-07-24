@@ -1,3 +1,6 @@
+Version 1.03
+- Added mySQL and SQLite support
+
 Version 1.02
 - Added nearby (cuboid with radius 10) players to log
 

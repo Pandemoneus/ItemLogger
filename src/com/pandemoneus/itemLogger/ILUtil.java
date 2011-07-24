@@ -17,7 +17,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.inventory.ItemStack;
 
-import com.pandemoneus.itemLogger.logger.Log;
 
 /**
  * Utility class for ItemLogger.
@@ -240,7 +239,7 @@ public final class ILUtil {
 		}
 	}
 
-	private static String formatDamageCause(DamageCause lastDamageCause) {
+	public static String formatDamageCause(DamageCause lastDamageCause) {
 		if (lastDamageCause == null) {
 			return "Unknown";
 		}

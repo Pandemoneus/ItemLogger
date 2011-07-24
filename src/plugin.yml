@@ -1,6 +1,6 @@
 name: ItemLogger
 main: com.pandemoneus.itemLogger.ItemLogger
-version: 1.01
+version: 1.03
 author: 'Pandemoneus'
 
 commands:
