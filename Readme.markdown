@@ -28,8 +28,8 @@ MySQL.database: [string] - determine the used database here<br>
 
 To sum it up:<br>
 If you want<br>
-- Flat files: UseFlatFile = true
-- MySQL: UseFlatFile = false, MySQL.enabled = true
+- Flat files: UseFlatFile = true<br>
+- MySQL: UseFlatFile = false, MySQL.enabled = true<br>
 - SQLite: UseFlatFile = false, MYSQL.enabled = false
 
 Permission nodes:
