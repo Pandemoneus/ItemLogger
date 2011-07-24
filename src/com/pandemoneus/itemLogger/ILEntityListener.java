@@ -73,6 +73,9 @@ public final class ILEntityListener extends EntityListener {
 		}
 		
 		String playerName = player.getName();
+		int xPos = player.getLocation().getBlockX();
+		int yPos = player.getLocation().getBlockY();
+		int zPos = player.getLocation().getBlockZ();
 		
 		String nearbyPlayerNames = "";
 		
@@ -103,7 +106,7 @@ public final class ILEntityListener extends EntityListener {
 		
 		if (plugin.MySQL) {
 			try {
-				plugin.manageMySQL.insertQuery("INSERT INTO logs VALUES ('" + dateRep + "', '" + playerName + "', '" + ILUtil.formatDamageCause(lastDamageCause) + "', '" + nearbyPlayerNames + "', '" + droppedItemsList + "');");
+				plugin.manageMySQL.insertQuery("INSERT INTO logs VALUES ('" + dateRep+ "', '" + playerName + "', 'X="+ xPos + " Z=" + zPos + " Y=" + yPos + "', '"+ ILUtil.formatDamageCause(lastDamageCause)+ "', '" + nearbyPlayerNames + "', '"+ droppedItemsList + "');");
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			} catch (InstantiationException e) {
@@ -112,7 +115,6 @@ public final class ILEntityListener extends EntityListener {
 				e.printStackTrace();
 			}
 		} else {
-			plugin.manageSQLite.insertQuery("INSERT INTO logs VALUES ('" + dateRep + "', '" + playerName + "', '" + ILUtil.formatDamageCause(lastDamageCause) + "', '" + nearbyPlayerNames + "', '" + droppedItemsList + "');");
-		}
+			plugin.manageSQLite.insertQuery("INSERT INTO logs VALUES ('" + dateRep+ "', '" + playerName + "', 'X="+ xPos + " Z=" + zPos + " Y=" + yPos + "', '"+ ILUtil.formatDamageCause(lastDamageCause)+ "', '" + nearbyPlayerNames + "', '"+ droppedItemsList + "');");		}
 	}
 }

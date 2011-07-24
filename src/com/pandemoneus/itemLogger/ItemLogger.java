@@ -90,7 +90,7 @@ public final class ItemLogger extends JavaPlugin {
 				try {
 					if (manageMySQL.checkConnection()) {
 						if (!manageMySQL.checkTable("logs")) {
-							String query = "CREATE TABLE logs (time VARCHAR(255), player VARCHAR(255), death_cause VARCHAR(255), nearby_players TEXT, items_dropped TEXT);";
+							String query = "CREATE TABLE logs (time VARCHAR(255), player VARCHAR(255), location VARCHAR(255), death_cause VARCHAR(255), nearby_players TEXT, items_dropped TEXT);";
 							manageMySQL.createTable(query);
 						}
 					} else {
@@ -116,7 +116,7 @@ public final class ItemLogger extends JavaPlugin {
 				
 				// Check if the table exists, if it doesn't create it
 				if (!manageSQLite.checkTable("logs")) {
-					String query = "CREATE TABLE logs (time VARCHAR(255), player VARCHAR(255), death_cause VARCHAR(255), nearby_players TEXT, items_dropped TEXT);";
+					String query = "CREATE TABLE logs (time VARCHAR(255), player VARCHAR(255), location VARCHAR(255), death_cause VARCHAR(255), nearby_players TEXT, items_dropped TEXT);";
 					manageSQLite.createTable(query);
 				}	
 			}

@@ -130,6 +130,10 @@ public final class ILUtil {
 		loadFiles();
 
 		String playerName = player.getName().toLowerCase() + ".txt";
+		int xPos = player.getLocation().getBlockX();
+		int yPos = player.getLocation().getBlockY();
+		int zPos = player.getLocation().getBlockZ();
+		
 		File f;
 
 		if (map.containsKey(playerName)) {
@@ -152,6 +156,7 @@ public final class ILUtil {
 			out.println(dateRep);
 			out.println("Died because of: "
 					+ formatDamageCause(lastDamageCause));
+			out.println("At: X=" + xPos + ", Z=" + zPos + ", Y=" + yPos);
 			out.print("Nearby players:");
 			if (nearbyPlayers.isEmpty()) {
 				out.print(" --None--");
