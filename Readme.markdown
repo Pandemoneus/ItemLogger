@@ -27,7 +27,7 @@ MySQL.password: [string] - insert your password here
 MySQL.database: [string] - determine the used database here	
 
 To sum it up:	
-If you want	
+If you want		
 - Flat files: UseFlatFile = true	
 - MySQL: UseFlatFile = false, MySQL.enabled = true	
 - SQLite: UseFlatFile = false, MYSQL.enabled = false
@@ -40,6 +40,6 @@ itemlogger.log.deletelog //makes deletelog command available
 
 Commands:
 -----------------
-itemlogger (alias: il) - shows the help	
-itemlogger clearlogs (alias: il cl) - deletes all logs	
+itemlogger (alias: il) - shows the help		
+itemlogger clearlogs (alias: il cl) - deletes all logs		
 itemlogger deletelog [player] (alias: il dl [player]) - deletes the log of the [player]
