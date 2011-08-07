@@ -19,7 +19,7 @@ How to uninstall:
 
 Editable options:
 -----------------
-UseFlatFile: [true, false] - determines whether a regular flat file(*.txt) should be used, if true, the plugin will not use MySQL or SQLite	
+UseFlatFile: [true, false] - determines whether a regular flat file(*.txt) should be used, if true, the plugin will not use MySQL or SQLite		
 MySQL.enabled: [true, false] - determines whether mySQL should be used (if UseFlatFile = false), if false, SQLite will be used	
 MySQL.host: [string] - insert the name of your host here	
 MySQL.username: [string] - insert your username here	
