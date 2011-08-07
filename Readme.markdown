@@ -1,5 +1,5 @@
-ItemLogger plugin v1.031
-by Pandemoneus
+ItemLogger plugin v1.031	
+by Pandemoneus	
 https://github.com/Pandemoneus
 
 Requirements:
